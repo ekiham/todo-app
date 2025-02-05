@@ -37,7 +37,7 @@ function Todo({ todos, completeTodo, removeTodo, updateTodo }) {
         />
         <CiEdit
           onClick={() => setEdit({ id: todo.id, value: todo.text })}
-          className="delete-icon"
+          className="edit-icon"
         />
       </div>
     </div>

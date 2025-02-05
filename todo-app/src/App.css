@@ -102,13 +102,15 @@ h1 {
 }
 
 .delete-icon,
+.edit-icon,
 .delete-icon:hover {
   cursor: pointer;
   color: white;
   font-size: 1.5rem;
 }
 
-.delete-icon:hover {
+.delete-icon:hover,
+.edit-icon:hover {
   color: rgb(239, 233, 213);
 }
 
