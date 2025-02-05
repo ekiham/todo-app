@@ -1,8 +1,13 @@
 import { useState } from "react";
 import "./App.css";
+import TodoForm from "./TodoForm";
 
 function App() {
-  return <div>Hello</div>;
+  return (
+    <div className="todo-app">
+      <TodoForm />
+    </div>
+  );
 }
 
 export default App;
