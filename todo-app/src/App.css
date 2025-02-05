@@ -23,6 +23,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  gap: 50px;
 }
 
 h1 {
@@ -37,6 +38,7 @@ h1 {
   flex-direction: row;
   align-items: center;
   width: 100%;
+  padding-bottom: 10px;
 }
 
 .todo-input {
@@ -66,7 +68,20 @@ h1 {
   white-space: nowrap;
 }
 
-.todo-button:hover {
+.todo-update-button {
+  padding: 10px 20px;
+  height: 42px;
+  background-color: rgb(113, 187, 178);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  white-space: nowrap;
+}
+
+.todo-button:hover,
+.todo-update-button:hover {
   background-color: rgb(73, 125, 116);
 }
 

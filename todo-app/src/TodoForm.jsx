@@ -29,7 +29,7 @@ function TodoForm(props) {
             className="todo-input"
             onChange={handleChange}
           />
-          <button className="todo-button">Update task</button>
+          <button className="todo-update-button">Update task</button>
         </>
       ) : (
         <>
