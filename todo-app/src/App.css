@@ -1,42 +1,120 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Arial", sans-serif;
+  background-color: rgb(225, 220, 200);
+  color: rgb(39, 68, 93);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.todo-app {
+  background-color: rgb(239, 233, 213);
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  width: 520px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+h1 {
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+  color: rgb(39, 68, 93);
   text-align: center;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+.todo-form {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.todo-input {
+  padding: 10px;
+  font-size: 1rem;
+  width: 75%;
+  margin-right: 10px;
+  border: 2px solid rgb(73, 125, 116);
+  border-radius: 5px;
+  outline: none;
+  color: rgb(39, 68, 93);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+.todo-input:focus {
+  border-color: rgb(113, 187, 178);
 }
 
-.card {
-  padding: 2em;
+.todo-button {
+  padding: 10px 20px;
+  height: 42px;
+  background-color: rgb(113, 187, 178);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  white-space: nowrap;
 }
 
-.read-the-docs {
-  color: #888;
+.todo-button:hover {
+  background-color: rgb(73, 125, 116);
+}
+
+.todo-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgb(73, 125, 116);
+  color: white;
+  padding: 15px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  width: 100%;
+  transition: all 0.3s ease;
+}
+
+.todo-row.complete {
+  background-color: rgb(113, 187, 178);
+  text-decoration: line-through;
+}
+
+.todo-row:hover {
+  background-color: rgb(39, 68, 93);
+}
+
+.todo-row:first-child {
+  margin-top: 20px;
+}
+
+.icons {
+  display: flex;
+  gap: 10px;
+}
+
+.delete-icon,
+.delete-icon:hover {
+  cursor: pointer;
+  color: white;
+  font-size: 1.5rem;
+}
+
+.delete-icon:hover {
+  color: rgb(239, 233, 213);
+}
+
+.complete-icon,
+.complete-icon:hover {
+  cursor: pointer;
+  color: white;
+  font-size: 1.5rem;
 }

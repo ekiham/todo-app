@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 
 function TodoForm(props) {
   const [input, setInput] = useState("");
@@ -20,6 +20,7 @@ function TodoForm(props) {
     <form className="todo-form" onSubmit={handleSubmit}>
       <input
         type="text"
+        autoFocus
         placeholder="Add a todo"
         value={input}
         name="text"
