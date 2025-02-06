@@ -34,7 +34,7 @@ function TodoForm(props) {
             name="text"
             className="todo-input"
             onChange={handleChange}
-            maxLength={35}
+            maxLength={30}
           />
           <button className="todo-update-button">Update task</button>
         </>
@@ -48,7 +48,7 @@ function TodoForm(props) {
             name="text"
             className="todo-input"
             onChange={handleChange}
-            maxLength={35}
+            maxLength={30}
           />
           <button className="todo-button">Add a task</button>
         </>
