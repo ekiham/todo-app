@@ -1,5 +1,4 @@
 import { useState } from "react";
-import TodoList from "./TodoList";
 import { IoTrashOutline } from "react-icons/io5";
 import { CiEdit } from "react-icons/ci";
 import TodoForm from "./TodoForm";
