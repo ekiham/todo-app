@@ -3,6 +3,7 @@ import TodoList from "./TodoList";
 import { IoTrashOutline } from "react-icons/io5";
 import { CiEdit } from "react-icons/ci";
 import TodoForm from "./TodoForm";
+import { FaCheckCircle } from "react-icons/fa";
 
 function Todo({ todos, completeTodo, removeTodo, updateTodo }) {
   const [edit, setEdit] = useState({
@@ -27,10 +28,12 @@ function Todo({ todos, completeTodo, removeTodo, updateTodo }) {
         <TodoForm edit={edit} onSubmit={submitUpdate} />
       ) : (
         <>
-          <div key={todo.id} onClick={() => completeTodo(todo.id)}>
-            {todo.text}
-          </div>
+          <div>{todo.text}</div>
           <div className="icons">
+            <FaCheckCircle
+              onClick={() => completeTodo(todo.id)}
+              className="complete-icon"
+            />
             <IoTrashOutline
               onClick={() => removeTodo(todo.id)}
               className="delete-icon"
