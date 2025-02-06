@@ -18,28 +18,30 @@ function Todo({ todos, completeTodo, removeTodo, updateTodo }) {
     });
   };
 
-  if (edit.id) {
-    return <TodoForm edit={edit} onSubmit={submitUpdate} />;
-  }
-
   return todos.map((todo, index) => (
     <div
       className={todo.isComplete ? "todo-row complete" : "todo-row"}
       key={index}
     >
-      <div key={todo.id} onClick={() => completeTodo(todo.id)}>
-        {todo.text}
-      </div>
-      <div className="icons">
-        <IoTrashOutline
-          onClick={() => removeTodo(todo.id)}
-          className="delete-icon"
-        />
-        <CiEdit
-          onClick={() => setEdit({ id: todo.id, value: todo.text })}
-          className="edit-icon"
-        />
-      </div>
+      {edit.id === todo.id ? (
+        <TodoForm edit={edit} onSubmit={submitUpdate} />
+      ) : (
+        <>
+          <div key={todo.id} onClick={() => completeTodo(todo.id)}>
+            {todo.text}
+          </div>
+          <div className="icons">
+            <IoTrashOutline
+              onClick={() => removeTodo(todo.id)}
+              className="delete-icon"
+            />
+            <CiEdit
+              onClick={() => setEdit({ id: todo.id, value: todo.text })}
+              className="edit-icon"
+            />
+          </div>
+        </>
+      )}
     </div>
   ));
 }
